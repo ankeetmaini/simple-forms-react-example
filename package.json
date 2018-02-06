@@ -1,0 +1,21 @@
+{
+  "name": "form-example",
+  "description": "simple-forms-react example",
+  "version": "0.0.115",
+  "dependencies": {
+    "styled-components": "3.1.6",
+    "simple-forms-react": "latest",
+    "regenerator-runtime": "0.11.1",
+    "react-dom": "15.6.0",
+    "react": "15.6.2"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
