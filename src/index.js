@@ -20,7 +20,9 @@ const emptyValidator = val =>
   !val ? { valid: false, message: 'This is required' } : { valid: true };
 
 const usernameValidator = val =>
-  setTimeout(() => Promise.resolve({ valid: true }), 5000);
+  new Promise((resolve, reject) => {
+    setTimeout(() => Promise.resolve({valid: true}), 5000);
+  });
 
 const App = () => (
   <Container>
@@ -68,9 +70,9 @@ const App = () => (
                 placeholder: 'type your username',
               })}
             />
+            {valid.username && <Spinner radius="10" stroke="2" />}
             {touched.username &&
             errors.username && <Error>{errors.username}</Error>}
-            {valid.username && <Spinner radius="4" stroke="2" />}
           </InputHolder>
           <ButtonDiv>
             {isSubmitting ? (
